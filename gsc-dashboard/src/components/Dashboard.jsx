@@ -28,7 +28,7 @@ const TABS = ['Oversikt', 'Branded', 'Non-branded', 'Muligheter', 'Alle søkeord
 export default function Dashboard({ rows, fileName, onReset }) {
   const [brandTerms, setBrandTerms] = useState('');
   const [activeTab, setActiveTab] = useState('Oversikt');
-  const [pieMetric, setPieMetric] = useState('clicks');
+  const pieMetric = 'clicks';
 
   const classified = useMemo(() => classifyQueries(rows, brandTerms), [rows, brandTerms]);
   const { branded, nonBranded } = useMemo(() => splitByBrand(classified), [classified]);

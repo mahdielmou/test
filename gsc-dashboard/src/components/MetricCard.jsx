@@ -1,4 +1,5 @@
-export default function MetricCard({ label, value, sub, icon: Icon, color = 'indigo', trend }) {
+export default function MetricCard({ label, value, sub, icon, color = 'indigo', trend }) {
+  const Icon = icon;
   const colors = {
     indigo: { bg: 'bg-indigo-50', icon: 'text-indigo-600', value: 'text-indigo-700' },
     emerald: { bg: 'bg-emerald-50', icon: 'text-emerald-600', value: 'text-emerald-700' },
